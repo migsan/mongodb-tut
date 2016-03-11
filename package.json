@@ -1,7 +1,9 @@
 {
   "scripts": {
+    "test": "mocha test.js"
   },
   "dependencies": {
-    "express": "4.12.3"
+    "express": "4.12.3",
+    "mocha": "2.2.4"
   }
 }
