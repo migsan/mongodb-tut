@@ -1,7 +1,7 @@
 var express = require('express');
 var status = require('http-status');
 
-module.exports = funciton(wagner) {
+module.exports = function(wagner) {
     var api = express.Router();
 
     api.get('/category/id/:id', wagner.invoke(function(Category) {
@@ -15,7 +15,7 @@ module.exports = funciton(wagner) {
                 if (!category) {
                     return res.
                         status(status.NOT_FOUND).
-                        json({ error: error.toString() });
+                        json({ error: 'Not found' });
                 }
                 res.json({ category: category });
             });
@@ -25,7 +25,7 @@ module.exports = funciton(wagner) {
     api.get('/category/parent/:id', wagner.invoke(function(Category) {
         return function(req, res) {
             Category.
-                find({ parent: req.params.id }.
+                find({ parent: req.params.id }).
                 sort({ _id: 1 }).
                 exec(function(error, categories) {
                     if (error) {

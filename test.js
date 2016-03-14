@@ -1,24 +1,12 @@
-var app = require('./server');
-var assert = require('assert');
-var superagent = require('superagent');
+var URL_ROOT: 'http://localhost:3000';
 
-describe('server', function() {
+describe('Category API', function() {
     var server;
+    var Category;
 
-    beforeEach(function() {
-        server = app().listen(3000);
-    });
+    before(function() {
+        var app = express();
 
-    afterEach(function() {
-        server.close();
-    });
-
-    it('prints out "Hello, World!" when user goest to /', function(done) {
-        superagent.get('http://localhost:3000/', function(error, res) {
-            assert.ifError(error);
-            assert.equal(res.status, 200);
-            assert.equal(res.text, "Hello, World!");
-            done();
-        });
+        // WIP
     });
 });
