@@ -1,6 +1,7 @@
 var express = require('express');
 var assert = require('assert');
 var wagner = require('wagner-core');
+var superagent = require('superagent');
 
 var URL_ROOT= 'http://localhost:3000';
 
