@@ -1,9 +1,15 @@
 {
-  "scripts": {
-    "test": "mocha test.js"
-  },
-  "dependencies": {
-    "express": "4.12.3",
-    "mocha": "2.2.4"
-  }
+    "scripts": {
+        "test": "mocha test.js"
+    },
+    "dependencies": {
+        "express": "4.12.3",
+        "mocha": "2.2.4",
+        "mongoose": "^4.4.7",
+        "http-status": "0.1.8"
+    },
+    "devDependencies": {
+        "mocha": "2.2.4",
+        "superagent": "1.2.0"
+    }
 }

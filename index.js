@@ -1,4 +1,11 @@
-var server = require('./server');
+var express = require('express');
+var wagner = require('wagner-core');
 
-server().listen(3000);
-console.log('Server listening on port 3000');
+require('./models')(wagner);
+
+var app = express();
+
+app.use('/api/v1', require('./api')(wagner));
+
+app.listen(3000);
+console.log('Listening on port 3000');
